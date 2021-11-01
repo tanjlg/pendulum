@@ -12,7 +12,6 @@ The Streamlit app is intended to digitise the classic pendulum experiment we per
 
 import numpy as np
 import pandas as pd
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import streamlit as st
 from sklearn.linear_model import BayesianRidge, LinearRegression, ARDRegression
