@@ -100,8 +100,8 @@ st.header('Part II: Data Analysis')
 st.write('In Part II of the experiment, you will be processing the collected data and inferring the relationship between the period and length of the pendulum.')
 
 st.subheader('Procedure')
-st.markdown("5. Calculate the average time for 20 oscillations, usng the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?) Hence, calculate the period of the pendulum $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?) 
-st.write('Return yours answers to these questions and those in Part III, alongside screen captures of this page to your teacher.')")
+st.markdown("5. Calculate the average time for 20 oscillations, usng the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?) Hence, calculate the period of the pendulum $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
+st.write('Return yours answers to these questions and those in Part III, alongside screen captures of this page to your teacher.')
 t = (t1+t2) / 2
 T = t / 20
 T2 = T ** 2
