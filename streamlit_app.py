@@ -8,6 +8,8 @@ Tan Jing Long
 This is a Python script for deployment on Streamlit.
 
 The Streamlit app is intended to digitise the classic pendulum experiment we perform in secondary school, particularly for the data tabulation and analysis aspects.
+
+The content for the pendulum experiment is standard. Here, I have adapted it from Physics Matters Practical Book (3rd ed.) by Charles Chew and Ho Boon Tiong.
 """
 
 import numpy as np
