@@ -28,10 +28,8 @@ st.subheader('Aim')
 st.write('To investigate the relationship between the period and the length of a simple pendulum')
 
 st.subheader('Apparatus')
-image = Image.open('./media/apparatus.jpg')
-st.image(image,
-         caption='Figure 1: Apparatus',
-         width=400)
+image1 = Image.open('./media/apparatus.jpg')
+st.image(image1, caption='Figure 1: Apparatus')
 
 st.write('Retort stand  \n',
          'Sets of boss and clamp  \n',
@@ -43,13 +41,17 @@ st.write('Retort stand  \n',
          'Stopwatch  \n',
          'Protractor')
 
-image = Image.open('./media/exptsetup_side.jpg')
-st.image(image, caption='Figure 1: Experimental Set-up',)
+image2 = Image.open('./media/exptsetup_side.jpg')
+st.image(image2, caption='Figure 2: Experimental Set-up',)
 
 length, t1, t2 = np.empty(6), np.empty(6), np.empty(6)
 
 st.subheader('Procedure')
 st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held tighly by the split cork.")
+image = Image.open('./media/splitcork_unfixed.jpg')
+st.image(image,
+         caption='Figure 3: Split Cork Unassembled',
+         width=400)
 
 st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is appoximately one metre.")
 length[0] = st.number_input('Measure the length of the pendulum in centimetres.',
