@@ -52,8 +52,7 @@ image3a = Image.open('./media/splitcork_unfixed.jpg')
 image3b = Image.open('./media/splitcork_knot.jpg')
 image3c = Image.open('./media/splitcork_fixed.jpg')
 st.image([image3a, image3b, image3c],
-         caption='Figure 3: Assembly of Split Cork',
-         width=244)
+         caption='Figure 3: Assembly of Split Cork')
 
 st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is appoximately one metre.")
 length[0] = st.number_input('Measure the length of the pendulum in centimetres.',
