@@ -51,7 +51,7 @@ st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held
 image3a = Image.open('./media/splitcork_unfixed.jpg')
 image3b = Image.open('./media/splitcork_knot.jpg')
 image3c = Image.open('./media/splitcork_fixed.jpg')
-st.image([image3a, image3b, image3c],
+st.image([image3a, image3b],
          caption='Figure 3: Assembly of Split Cork')
 
 st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is appoximately one metre.")
