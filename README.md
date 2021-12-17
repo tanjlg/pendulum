@@ -1,5 +1,10 @@
-# Pendulum Experiment
+# Blended Learning in Physics Practicals #
+## The Pendulum Experiment ##
 
-This script is intended to be published as as Streamlit app at https://share.streamlit.io/tanjlg/pendulum/main.
+This repository hosts the script and media files for the corresponding Streamlit app at https://share.streamlit.io/tanjlg/pendulum/main.
 
-The app is meant to be used as a digitised form of the Pendulum experiment typically conducted for Secondary 3 students, with no change to the data collection aspect - physically. However, the data tabulation will be digital, which will facilitate post-processing and data analysis. Crucially, students will be able to manipulate the widget to draw a line of best-fit between the period of the pendulum squared, and its length.
+This app is intended to be an Practical e-Worksheet for Upper Secondary - JC students, and is intended to be carried out in a blended fashion, with the data collection component done physically (preferred) or asynchronously (artificial data supplied). The physical data collection may be done *in situ* in the laboratory on the e-Worksheet using a Personal Learning Device, or recorded in an experimental log and then transferred to the e-Worksheet subsequently. The student may then immediately or subsequently post-process the data asynchronously, including tabulation, computation of relevant quantities, plotting of relevant quantities, plotting of line of best-fit, and crucially, interpret the graphical parameters in relation to the underlying physical relations and constants.
+
+The key affordance of the app is in the sense-making of the plotting of the best-fit line, i.e. by minimisation of some cost function. This is achieved by a slide-bar widget where the student may manipulate the line of best-fit between the period of the pendulum squared, and its length. One current limitation of the app is that the widget does not afford for ad-hoc mathematical computations to be made; thus the calculation of the period squared from the measured quantity is automated and not explicitly performed by the student. Key considerations of using the app include integration with existing Learner Management Plaform, in particular, the MOE Student Learning Space, building resilience for home-based learning, increasing the authenticity of data analysis for Practicals, and instilling elements of statistical learning and data-literacy.
+
+This app is also intended to supplement a microcourse currently in development with AI Singapore, for the AI for Curriculum Community of Practice. The title of the microcourse is: Data Science in Practicals - The Pendulum Experiment.
