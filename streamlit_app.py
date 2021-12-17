@@ -38,7 +38,7 @@ st.write('Retort stand  \n',
          'Stopwatch  \n',
          'Protractor')
 
-image = Image.open('./expt.jpg')
+image = Image.open('./media/exptsetup_side.jpg')
 st.image(image,
          caption='Figure 1: Experimental Set-up',
          width=400)
@@ -54,7 +54,7 @@ length[0] = st.number_input('Measure the length of the pendulum in centimetres.'
 
 st.markdown("3. Set the pendulum into oscillation by displacing the pendulum bob to one side by a small angle (less than $10^\circ$) and then releasing it. The motion of the pendulum from the point of release to the rightmost point and then back to the leftmost point is an example of a complete oscillation (video below). Ensure that the pendulum oscillates in a vertical plane instead of tracing a cone.")
 
-video_file = open('./expt.mp4', 'rb')
+video_file = open('./media/technique.mp4', 'rb')
 video_bytes = video_file.read()
 st.video(video_bytes)
 
