@@ -41,6 +41,7 @@ st.write('Retort stand  \n',
          'Stopwatch  \n',
          'Protractor')
 
+st.subheader('Experiment Set-up')
 image2 = Image.open('./media/exptsetup_side.jpg')
 st.image(image2, caption='Figure 2: Experimental Set-up',)
 
@@ -51,7 +52,8 @@ st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held
 image3a = Image.open('./media/splitcork_unfixed.jpg')
 image3b = Image.open('./media/splitcork_knot.jpg')
 image3c = Image.open('./media/splitcork_fixed.jpg')
-st.image([image3a, image3b, image3c], width=244)
+image3d = Image.open('./media/exptsetup_top.jpg')
+st.image([image3a, image3b, image3c, image3d], width=244)
 
 st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is appoximately one metre.")
 length[0] = st.number_input('Measure the length of the pendulum in centimetres.',
