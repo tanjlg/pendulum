@@ -28,6 +28,11 @@ st.subheader('Aim')
 st.write('To investigate the relationship between the period and the length of a simple pendulum')
 
 st.subheader('Apparatus')
+image = Image.open('./media/apparatus.jpg')
+st.image(image,
+         caption='Figure 1: Apparatus',
+         width=400)
+
 st.write('Retort stand  \n',
          'Sets of boss and clamp  \n',
          'Split cork  \n',
@@ -39,9 +44,7 @@ st.write('Retort stand  \n',
          'Protractor')
 
 image = Image.open('./media/exptsetup_side.jpg')
-st.image(image,
-         caption='Figure 1: Experimental Set-up',
-         width=400)
+st.image(image, caption='Figure 1: Experimental Set-up',)
 
 length, t1, t2 = np.empty(6), np.empty(6), np.empty(6)
 
