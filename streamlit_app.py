@@ -99,7 +99,7 @@ st.write('There will be some questions below. Return your answers to these quest
 st.subheader('Procedure')
 
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
-if uploaded_file is not None:
+if data_com is not None:
   df = pd.read_csv(data_com)
   st.write(df)
          
