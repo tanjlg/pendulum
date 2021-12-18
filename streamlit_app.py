@@ -45,7 +45,7 @@ st.subheader('Experiment Set-up')
 image2 = Image.open('./media/exptsetup_side.jpg')
 st.image(image2, caption='Figure 2: Experimental Set-up',)
 
-length, t1, t2, tave, T, T2 = np.empty(6), np.empty(6), np.empty(6), np.empty(6), np.empty(6)
+length, t1, t2, tave, T, T2 = np.empty(6), np.empty(6), np.empty(6), np.empty(6), np.empty(6), np.empty(6)
 
 st.subheader('Procedure')
 st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held tighly by the split cork.")
