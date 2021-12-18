@@ -96,10 +96,13 @@ st.write('There will be some questions below. Return your answers to these quest
 
 st.subheader('Procedure')
 
-st.markdown("5. By using an Excel Spreadsheet or otherwise, calculate the average time for 20 oscillations and record it in the corresponding entry in the CSV file.")
+st.markdown("5. By using an Excel Spreadsheet or otherwise, calculate the average time for the two time readings and record it in the corresponding entry in the CSV file.")
 if st.button('Hint'):
-         st.markdown("The averate of two time readings can be calculated with the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?)")
-st.markdown("Hence, calculate the period of the pendulum $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
+         st.markdown("The average of two time readings can be calculated with the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?)")
+
+st.markdown("6. Calculate the period of the pendulum sqaured and record it in the corresponding entry in the CSV file.")
+if st.button('Hint'):
+         st.markdown("The period and period squared may be calculated with the formulae $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
 
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
 if data_com is not None:
