@@ -75,57 +75,26 @@ df = pd.DataFrame({'length/cm': length, 't1/s': t1, 't2/s': t2})
 
 st.write(df)
 
-st.markdown("5. Calculate the average time for 20 oscillations, usng the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?) Hence, calculate the period of the pendulum $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
-t = (t1+t2) / 2
-T = t / 20
-T2 = T ** 2
+
 df2 = df
 df2['<t>/s'] = t
 df2['Period/s'] = T
 df2['T^2/s^2'] = T2
 
-@st.cache
-def convert_df(df):
-     # IMPORTANT: Cache the conversion to prevent computation on every rerun
-     return df.to_csv().encode('utf-8')
-
-csv = convert_df(df2)
-
+csv_raw = convert_df(df2)
 st.download_button(
      label="Download data as CSV",
-     data=csv,
-     file_name='data.csv',
+     data=csv_raw,
+     file_name='data_raw.csv',
      mime='text/csv',
  )
 
 st.markdown('Repeat steps 3-4 with five more values of $l$ varying from 100.0 cm to 30.0 cm.')
 
-"""
-length[1] = st.number_input('Measure the length of the pendulum in centimetres.',
-                     value=90.0, step=0.1)
-t1[1] = st.number_input(label='First reading of time taken for 20 oscillations for length of approximately 80-100 cm', step=0.1)
-t2[1] = st.number_input(label='Second reading of time taken for 20 oscillations for length of approximately 80-100 cm', step=0.1)
-
-length[2] = st.number_input('Measure the length of the pendulum in centimetres.',
-                     value=70.0, step=0.1)
-t1[2] = st.number_input(label='First reading of time taken for 20 oscillations for length of approximately 60-80 cm', step=0.1)
-t2[2] = st.number_input(label='Second reading of time taken for 20 oscillations for length of approximately 60-80 cm', step=0.1)
-
-length[3] = st.number_input('Measure the length of the pendulum in centimetres.',
-                     value=60.0, step=0.1)
-t1[3] = st.number_input(label='First reading of time taken for 20 oscillations for length of approximately 50-70 cm', step=0.1)
-t2[3] = st.number_input(label='Second reading of time taken for 20 oscillations for length of approximately 50-70 cm', step=0.1)
-
-length[4] = st.number_input('Measure the length of the pendulum in centimetres.',
-                     value=50.0, step=0.1)
-t1[4] = st.number_input(label='First reading of time taken for 20 oscillations for length of approximately 40-60 cm', step=0.1)
-t2[4] = st.number_input(label='Second reading of time taken for 20 oscillations for length of approximately 40-60 cm', step=0.1)
-
-length[5] = st.number_input('Measure the length of the pendulum in centimetres.',
-                     value=40.0, step=0.1)
-t1[5] = st.number_input(label='First reading of time taken for 20 oscillations for length of approximately 30-50 cm', step=0.1)
-t2[5] = st.number_input(label='Second reading of time taken for 20 oscillations for length of approximately 30-50 cm', step=0.1)
-"""
+st.markdown("5. Calculate the average time for 20 oscillations, usng the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?) Hence, calculate the period of the pendulum $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
+t = (t1+t2) / 2
+T = t / 20
+T2 = T ** 2
 
 
 st.header('Part II: Data Analysis')
@@ -134,8 +103,10 @@ st.write('There will be some questions below. Return your answers to these quest
 
 st.subheader('Procedure')
 
-if st.button('Calculate'):
-    st.write(df2)
+data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
+if uploaded_file is not None:
+  df = pd.read_csv(data_com)
+  st.write(df)
 
 st.markdown("6. Plot the graph of $T^2/\mathrm{s}^2$ against $l/$cm.")
 fig, ax = plt.subplots()
