@@ -120,13 +120,16 @@ if st.button('Plot'):
     
 st.markdown('7. By drawing an appropriate line, deduce the relationship between the period $T$ and length $l$ of the pendulum.')
 if st.button('Draw'):
-    #m = st.slider('Gradient', min_value=0.00, max_value=0.10, value=0.04, step=0.001)
-    m = 0.04
+    m = st.slider('Gradient', min_value=0.00, max_value=0.10, value=0.04, step=0.001)
     c = st.slider('Intercept (vertical)', min_value=-0.10, max_value=0.10, value=0.0, step=0.01)
-    plt.plot(length, m*length+c)
-    plt.xlim(0,120)
-    plt.ylim(0,4.5)     
-    st.pyplot(fig)
+    # sum-of-squared error
+    cost = np.sum((T-m*length+c)**2)
+    st.markdown(C)
+
+plt.plot(length, m*length+c)
+plt.xlim(0,120)
+plt.ylim(0,4.5)     
+st.pyplot(fig)
     
     
 st.header('Part III: Questions')
