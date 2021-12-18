@@ -45,7 +45,8 @@ st.subheader('Experiment Set-up')
 image2 = Image.open('./media/exptsetup_side.jpg')
 st.image(image2, caption='Figure 2: Experimental Set-up',)
 
-var in [length, t1, t2, tave, T, T2] = numpy.zeros(8)
+for var in [length, t1, t2, tave, T, T2]:
+         var = numpy.zeros(8)
 
 st.subheader('Procedure')
 st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held tighly by the split cork.")
@@ -88,7 +89,7 @@ st.download_button(
      mime='text/csv',
  )
 
-st.markdown('Repeat steps 3-4 with five more values of $l$ varying from 100.0 cm to 30.0 cm.')
+st.markdown('Repeat steps 3-4 with seven more values of $l$ varying from 100.0 cm to 30.0 cm.')
 
 st.header('Part II: Data Analysis')
 st.write('In Part II of the experiment, you will be processing the collected data and inferring the relationship between the period and length of the pendulum.')
