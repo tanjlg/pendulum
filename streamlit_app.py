@@ -75,7 +75,7 @@ df = pd.DataFrame({'length/cm': length, 't1/s': t1, 't2/s': t2, '<t>/s': tave, '
 
 st.write(df)
 
-csv_raw = convert_df(df2)
+csv_raw = convert_df(df)
 st.download_button(
      label="Download data as CSV",
      data=csv_raw,
