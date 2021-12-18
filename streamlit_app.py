@@ -45,7 +45,7 @@ st.subheader('Experiment Set-up')
 image2 = Image.open('./media/exptsetup_side.jpg')
 st.image(image2, caption='Figure 2: Experimental Set-up',)
 
-length, t1, t2, tave, T, T2 = numpy.zeros(8, dtype=float16), numpy.zeros(8, dtype=float16), numpy.zeros(8, dtype=float16), numpy.zeros(8, dtype=float16), numpy.zeros(8, dtype=float16), numpy.zeros(8, dtype=float16)
+length, t1, t2, tave, T, T2 = numpy.zeros(8, dtype=float32), numpy.zeros(8, dtype=float32), numpy.zeros(8, dtype=float32), numpy.zeros(8, dtype=float32), numpy.zeros(8, dtype=float32), numpy.zeros(8, dtype=float32)
 
 st.subheader('Procedure')
 st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held tighly by the split cork.")
