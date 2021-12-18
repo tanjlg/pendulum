@@ -96,10 +96,7 @@ st.write('There will be some questions below. Return your answers to these quest
 
 st.subheader('Procedure')
 
-st.markdown("5. Calculate the average time for 20 oscillations, usng the formula $<t>=(t_1+t_2)/2$.
-            (Why do we have to take two readings and find their average?) Hence, calculate the period of the pendulum $T = <t>/20$ and $T^2$.
-            (Why couldn't we have just timed one oscillation?)"
-            )
+st.markdown("5. Calculate the average time for 20 oscillations, usng the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?) Hence, calculate the period of the pendulum $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
 
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
 if data_com is not None:
