@@ -45,7 +45,7 @@ st.subheader('Experiment Set-up')
 image2 = Image.open('./media/exptsetup_side.jpg')
 st.image(image2, caption='Figure 2: Experimental Set-up',)
 
-length, t1, t2 = np.empty(6), np.empty(6), np.empty(6)
+length, t1, t2, tave, T, T2 = np.empty(6), np.empty(6), np.empty(6), np.empty(6), np.empty(6)
 
 st.subheader('Procedure')
 st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held tighly by the split cork.")
@@ -71,15 +71,9 @@ st.markdown("5. Repeat step 3 and record the time $t_2$ for another 20 oscillati
 t2[0] = st.number_input(label='Second reading', step=0.1)
 
 st.write("Check that the time readings for 20 oscillations correspond to the respective lengths. Otherwise, you may correct and re-enter them above.")
-df = pd.DataFrame({'length/cm': length, 't1/s': t1, 't2/s': t2})
+df = pd.DataFrame({'length/cm': length, 't1/s': t1, 't2/s': t2, '<t>/s': tave, 'Period/s': T, 'T^2/s^2': T2})
 
 st.write(df)
-
-
-df2 = df
-df2['<t>/s'] = t
-df2['Period/s'] = T
-df2['T^2/s^2'] = T2
 
 csv_raw = convert_df(df2)
 st.download_button(
