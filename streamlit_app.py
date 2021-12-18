@@ -100,7 +100,7 @@ st.subheader('Procedure')
 
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
 if uploaded_file is not None:
-  df3 = pd.read_csv(data_com)
+  df = pd.read_csv(data_com)
   st.write(df3)
 
 st.markdown("6. Plot the graph of $T^2/\mathrm{s}^2$ against $l/$cm.")
