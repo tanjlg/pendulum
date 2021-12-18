@@ -76,7 +76,7 @@ df = pd.DataFrame({'length/cm': length, 't1/s': t1, 't2/s': t2, '<t>/s': tave, '
 st.write(df)
 
 @st.cache
- def convert_df(df):
+def convert_df(df):
      # IMPORTANT: Cache the conversion to prevent computation on every rerun
      return df.to_csv().encode('utf-8')
 
