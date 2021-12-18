@@ -126,10 +126,10 @@ if st.button('Draw'):
     cost = np.sum((T-m*length+c)**2)
     st.markdown(C)
 
-plt.plot(length, m*length+c)
-plt.xlim(0,120)
-plt.ylim(0,4.5)     
-st.pyplot(fig)
+#plt.plot(length, m*length+c)
+#plt.xlim(0,120)
+#plt.ylim(0,4.5)     
+#st.pyplot(fig)
     
     
 st.header('Part III: Questions')
