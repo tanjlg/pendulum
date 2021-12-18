@@ -70,7 +70,7 @@ t1[0] = st.number_input(label='First reading', step=0.1)
 st.markdown("5. Repeat step 3 and record the time $t_2$ for another 20 oscillations, in seconds.")
 t2[0] = st.number_input(label='Second reading', step=0.1)
 
-st.write("Check that the time readings for 20 oscillations correspond to the respective lengths. Otherwise, you may correct and re-enter them above.")
+st.write("Check that the time readings for 20 oscillations correspond to the respective lengths. Otherwise, you may correct and re-enter them above. Measurements yet to be made are initialised as 0. Thr right three columns will be discussed in the next part.")
 df = pd.DataFrame({'length/cm': length, 't1/s': t1, 't2/s': t2, '<t>/s': tave, 'Period/s': T, 'T^2/s^2': T2})
 
 st.write(df)
