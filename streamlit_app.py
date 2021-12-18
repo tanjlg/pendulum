@@ -45,8 +45,7 @@ st.subheader('Experiment Set-up')
 image2 = Image.open('./media/exptsetup_side.jpg')
 st.image(image2, caption='Figure 2: Experimental Set-up',)
 
-for var in [length, t1, t2, tave, T, T2]:
-         var = numpy.zeros(8)
+length, t1, t2, tave, T, T2 = numpy.zeros(8), numpy.zeros(8), numpy.zeros(8), numpy.zeros(8), numpy.zeros(8), numpy.zeros(8)
 
 st.subheader('Procedure')
 st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held tighly by the split cork.")
@@ -71,7 +70,7 @@ t1[0] = st.number_input(label='First reading', step=0.1)
 st.markdown("5. Repeat step 3 and record the time $t_2$ for another 20 oscillations, in seconds.")
 t2[0] = st.number_input(label='Second reading', step=0.1)
 
-st.write("Check that the time readings for 20 oscillations correspond to the respective lengths. Otherwise, you may correct and re-enter them above. Measurements yet to be made are initialised as 0. Thr right three columns will be discussed in the next part.")
+st.write("Check that the time readings for 20 oscillations correspond to the respective lengths. Otherwise, you may correct and re-enter them above. Measurements yet to be made are initialised as 0. The right three columns will be discussed in the next part.")
 df = pd.DataFrame({'length/cm': length, 't1/s': t1, 't2/s': t2, '<t>/s': tave, 'Period/s': T, 'T^2/s^2': T2})
 
 st.write(df)
@@ -83,13 +82,13 @@ def convert_df(df):
 
 csv_raw = convert_df(df)
 st.download_button(
-     label="Download data as CSV",
+     label="Download the tabulated data as a CSV file.",
      data=csv_raw,
      file_name='data_raw.csv',
      mime='text/csv',
  )
 
-st.markdown('Repeat steps 3-4 with seven more values of $l$ varying from 100.0 cm to 30.0 cm.')
+st.markdown('Repeat steps 3-4 with seven more values of $l$ varying from 100.0 cm to 30.0 cm. Record these values directly in the CSV file and save it for Part II.')
 
 st.header('Part II: Data Analysis')
 st.write('In Part II of the experiment, you will be processing the collected data and inferring the relationship between the period and length of the pendulum.')
