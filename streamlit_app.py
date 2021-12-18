@@ -82,7 +82,7 @@ def convert_df(df):
 
 csv_raw = convert_df(df)
 st.download_button(
-     label="Download the tabulated data as a CSV file.",
+     label="Download the tabulated data as a CSV file",
      data=csv_raw,
      file_name='data_raw.csv',
      mime='text/csv',
@@ -104,6 +104,7 @@ if data_com is not None:
   st.write(df)
          
 T2 = df['T^2/s^2']
+length = df['length/cm']
 
 st.markdown("6. Plot the graph of $T^2/\mathrm{s}^2$ against $l/$cm.")
 fig, ax = plt.subplots()
