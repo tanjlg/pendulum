@@ -96,11 +96,11 @@ st.write('There will be some questions below. Return your answers to these quest
 
 st.subheader('Procedure')
 
-st.markdown("5. By using an Excel Spreadsheet or otherwise, calculate the average time for the two time readings and record it in the corresponding entry in the CSV file.")
+st.markdown("6. By using an Excel Spreadsheet or otherwise, calculate the average time for the two time readings and record it in the corresponding entry in the CSV file.")
 if st.button('Hint'):
          st.markdown("The average of two time readings can be calculated with the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?)")
 
-st.markdown("6. Calculate the period of the pendulum squared and record it in the corresponding entry in the CSV file.")
+st.markdown("7. Calculate the period of the pendulum squared and record it in the corresponding entry in the CSV file.")
 if st.button('Hint 2'):
          st.markdown("The period and period squared may be calculated with the formulae $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
 
@@ -112,7 +112,7 @@ if data_com is not None:
 T2 = df['T^2/s^2']
 length = df['length/cm']
 
-st.markdown("7. Plot the graph of $T^2/\mathrm{s}^2$ against $l/$cm.")
+st.markdown("8. Plot the graph of $T^2/\mathrm{s}^2$ against $l/$cm.")
 fig, ax = plt.subplots()
 plt.plot(length, T2, 'x', markersize=3)
 plt.xlim(0,120)
@@ -124,7 +124,7 @@ plt.ylabel('Period^2/ s^2')
 if st.button('Plot'):
     st.pyplot(fig)
     
-st.markdown('8. By manipulating the line to minimise the error value, deduce the relationship between the period $T$ and length $l$ of the pendulum.')
+st.markdown('9. By manipulating the line to minimise the error value, deduce the relationship between the period $T$ and length $l$ of the pendulum.')
 m = st.slider('Gradient', min_value=0.00, max_value=0.10, value=0.04, step=0.0001)
 c = st.slider('Intercept (vertical)', min_value=-0.20, max_value=0.20, value=0.0, step=0.01)
 # sum-of-squared error
