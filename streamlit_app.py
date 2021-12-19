@@ -128,7 +128,8 @@ st.markdown('8. By manipulating the line to minimise the error value, deduce the
 m = st.slider('Gradient', min_value=0.00, max_value=0.10, value=0.04, step=0.001)
 c = st.slider('Intercept (vertical)', min_value=-0.20, max_value=0.20, value=0.0, step=0.02)
 # sum-of-squared error
-cost = np.sum((T2-m*length+c)**2)
+residuals = T2-(m*length+c)
+cost = np.sum(residuals**2)
 st.write('Sum-of-squared error:')
 st.write(cost)
 
