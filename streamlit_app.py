@@ -48,7 +48,7 @@ st.image(image2, caption='Figure 2: Experimental Set-up',)
 length, t1, t2, tave, T, T2 = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
 
 st.subheader('Procedure')
-st.markdown("1. Set-up the experiment as in Figure 1 above, with the thread held tighly by the split cork.")
+st.markdown("1. Set-up the experiment as in Figure 2 above, with the thread held tighly by the split cork.")
 image3a = Image.open('./media/splitcork_unfixed.jpg')
 image3b = Image.open('./media/splitcork_knot.jpg')
 image3c = Image.open('./media/splitcork_fixed.jpg')
