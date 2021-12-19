@@ -82,7 +82,7 @@ def convert_df(df):
 
 csv_raw = convert_df(df)
 st.download_button(
-     label="Download the tabulated data as a CSV file",
+     label="Download the tabulated data as CSV",
      data=csv_raw,
      file_name='data_raw.csv',
      mime='text/csv',
@@ -106,11 +106,11 @@ st.subheader('Procedure')
 
 st.markdown("7. By using an Excel Spreadsheet or otherwise, calculate the average time for the two time readings and record it in the corresponding entry in the CSV file.")
 if st.button('Hint'):
-         st.markdown("The average of two time readings can be calculated with the formula $<t>=(t_1+t_2)/2$. (Why do we have to take two readings and find their average?)")
+         st.markdown("The average of two time readings can be calculated with the formula $<t>=(t_1+t_2)/2$. Why do we have to take two readings and find their average?")
 
 st.markdown("8. Calculate the period of the pendulum squared and record it in the corresponding entry in the CSV file.")
 if st.button('Hint 2'):
-         st.markdown("The period and period squared may be calculated with the formulae $T = <t>/20$ and $T^2$. (Why couldn't we have just timed one oscillation?)")
+         st.markdown("The period and period squared may be calculated from the average time taken for 20 oscillations with the formulae $T = <t>/20$ and $T^2$. Why couldn't we have just timed one oscillation?")
 
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
 if data_com is not None:
