@@ -90,6 +90,9 @@ st.download_button(
 
 st.markdown('6. Repeat steps 3-5 with seven more values of $l$ varying from 100.0 cm to 30.0 cm. Record these values directly in the CSV file and save it for Part II. If you are not able to collect data in the laboratory, you may use the following CSV file.')
 
+with open('./data_processed.csv') as f:
+   st.download_button('Download artificial data as CSV', f, 'text/csv') 
+
 st.header('Part II: Data Analysis')
 st.write('In Part II of the experiment, you will be processing the collected data and inferring the relationship between the period and length of the pendulum.')
 st.write('There will be some questions below. Return your answers to these questions and those in Part III, alongside screen captures of the completed page to your teacher.')
