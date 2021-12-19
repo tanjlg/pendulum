@@ -153,6 +153,6 @@ st.header('Part III: Questions')
 st.write('In Part III, you wil be using the parameters of the fitted best-fit line between the dependent and independent variables to estimate unknown physical quantities.')
 
 st.markdown('1. From the fitted graph, estimate the length of the pendulum that will yield a period of 2.0 s')
-st.markdown('2. The formula for the period of a pendulum is $2\pi\sqrt{l/g}$, where $l$ is the length of the pendulum. Derive the value of $g$, including its units and comment on its physical significiance.')
+st.markdown('2. The formula for the period of a pendulum is $2\pi\sqrt{l/g}$, where $l$ is the length of the pendulum. Derive the value of the physical constant $g$, including its units and comment on its physical significiance.')
 
     
