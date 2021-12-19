@@ -90,10 +90,10 @@ st.download_button(
 
 st.markdown('6. Repeat steps 3-5 with seven more values of $l$ varying from 100.0 cm to 30.0 cm. Record these values directly in the CSV file and save it for Part II. If you are not able to collect data in the laboratory, you may use the following CSV file.')
 
-with open('./data_processed.csv') as data_com:
+with open('./data_processed.csv') as f:
      st.download_button(
          label="Download artificial data as CSV",
-         data=data_com,
+         data=f,
          file_name='artificial_data.csv',
          mime='text/csv',
      )
