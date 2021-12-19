@@ -88,7 +88,7 @@ st.download_button(
      mime='text/csv',
  )
 
-st.markdown('Repeat steps 3-4 with seven more values of $l$ varying from 100.0 cm to 30.0 cm. Record these values directly in the CSV file and save it for Part II.')
+st.markdown('Repeat steps 3-5 with seven more values of $l$ varying from 100.0 cm to 30.0 cm. Record these values directly in the CSV file and save it for Part II.')
 
 st.header('Part II: Data Analysis')
 st.write('In Part II of the experiment, you will be processing the collected data and inferring the relationship between the period and length of the pendulum.')
