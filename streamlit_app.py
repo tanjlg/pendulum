@@ -113,9 +113,11 @@ if st.button('Hint 2'):
          st.markdown("The period and period squared may be calculated from the average time taken for 20 oscillations with the formulae $T = <t>/20$ and $T^2$. Why couldn't we have just timed one oscillation?")
 
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
+N = 8 # for computing root-mean-squared error
 if data_com is not None:
   df = pd.read_csv(data_com)
   st.write(df)
+  N = np.count_nonzero(T2)
          
 T2 = df['T^2/s^2']
 length = df['length/cm']
@@ -140,7 +142,6 @@ c = st.slider('Intercept (vertical)', min_value=-0.20, max_value=0.20, value=0.0
 # root-mean-square deviation error
 residuals = T2-(m*length+c)
 sum_squared_error = np.sum(residuals**2)
-N = np.count_nonzero(T2)
 rms_error= np.sqrt(sum_squared_error/N)
 st.write(N)
 st.write('Root-mean-squared error: ')
