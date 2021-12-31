@@ -133,8 +133,8 @@ plt.ylabel('Period^2/ s^2')
 if st.button('Plot'):
     st.pyplot(fig)
     
-st.markdown('10. By manipulating the line to minimise the error value, deduce the relationship between the period $T$ and length $l$ of the pendulum. The root-mean-square deviation is similar to the standard deviation except it calculates the sum of squared distances from the hypothesised interpolated period $\hat{T}$ instead of the mean.')
-st.latex(r'''RMSE = \sqrt{\frac{1}{N_{readings}}\sum_1^{N_{readings}} \left(\hat{T}-T)^2 \right)}''')
+st.markdown('10. By manipulating the line to minimise the error value, deduce the relationship between the period $T$ and length $l$ of the pendulum. The root-mean-square deviation is similar to the standard deviation of a dataset except it calculates the sum of squared distances from the hypothesised interpolated period $\hat{T}$ instead of the mean $<T>$.')
+st.latex(r'''RMSE = \sqrt{\frac{1}{N_{readings}}\sum_1^{N_{readings}} \left(\hat{T}-T \right)^2}''')
 m = st.slider('Gradient', min_value=0.00, max_value=0.10, value=0.04, step=0.0001)
 c = st.slider('Intercept (vertical)', min_value=-0.20, max_value=0.20, value=0.0, step=0.01)
 # root-mean-square deviation error
