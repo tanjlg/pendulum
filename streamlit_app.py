@@ -143,9 +143,8 @@ c = st.slider('Intercept (vertical)', min_value=-0.20, max_value=0.20, value=0.0
 residuals = T2-(m*length+c)
 sum_squared_error = np.sum(residuals**2)
 rms_error= np.sqrt(sum_squared_error/N)
-st.write(N)
 st.write('Root-mean-squared error: ')
-st.write(cost)
+st.write(rms_error)
 
 plt.plot(length, m*length+c)
 plt.title('Linear fit of Period squared against length of the pendulum')
