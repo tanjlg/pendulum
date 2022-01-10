@@ -115,13 +115,15 @@ if st.button('Hint 2'):
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
 N = 8 # for computing root-mean-squared error
 
-T2 = df['T^2/s^2']
-length = df['length/cm']
-
 if data_com is not None:
+  T2 = df['T^2/s^2']
+  length = df['length/cm']
   df = pd.read_csv(data_com)
   st.write(df)
   N = np.count_nonzero(T2)
+
+T2 = df['T^2/s^2']
+length = df['length/cm']
          
 st.markdown("9. Plot the graph of $T^2/\mathrm{s}^2$ against $l/$cm.")
 fig, ax = plt.subplots()
