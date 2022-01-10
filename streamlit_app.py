@@ -116,10 +116,10 @@ data_com = st.file_uploader("Upload the csv file with the inputted raw data and 
 N = 8 # for computing root-mean-squared error
 
 if data_com is not None:
-  T2 = df['T^2/s^2']
-  length = df['length/cm']
   df = pd.read_csv(data_com)
   st.write(df)
+  T2 = df['T^2/s^2']
+  length = df['length/cm']
   N = np.count_nonzero(T2)
 
 T2 = df['T^2/s^2']
