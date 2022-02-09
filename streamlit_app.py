@@ -48,14 +48,14 @@ st.image(image2, caption='Figure 2: Experimental Set-up',)
 length, t1, t2, tave, T, T2 = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
 
 st.subheader('Procedure')
-st.markdown("1. Set-up the experiment as in Figure 2 above, with the thread held tighly by the split cork.")
+st.markdown("1. Set-up the experiment as in Figure 2 above, with the thread held tightly by the split cork.")
 image3a = Image.open('./media/splitcork_unfixed.jpg')
 image3b = Image.open('./media/splitcork_knot.jpg')
 image3c = Image.open('./media/splitcork_fixed.jpg')
 image3d = Image.open('./media/exptsetup_top.jpg')
 st.image([image3a, image3b, image3c, image3d], width=244)
 
-st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is appoximately one metre.")
+st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is approximately one metre.")
 length[0] = st.number_input('Measure the length of the pendulum in centimetres.',
                      value=100.0, step=0.1)
 
@@ -157,7 +157,7 @@ st.pyplot(fig)
     
     
 st.header('Part III: Questions')
-st.write('In Part III, you wil be using the parameters of the fitted best-fit line between the dependent and independent variables to estimate unknown physical quantities.')
+st.write('In Part III, you will be using the parameters of the fitted best-fit line between the dependent and independent variables to estimate unknown physical quantities.')
 
 st.markdown('1. From the fitted graph, estimate the length of the pendulum that will yield a period of 2.0 s')
 st.markdown('2. The formula for the period of a pendulum is $2\pi\sqrt{l/g}$, where $l$ is the length of the pendulum, and $g$ an unknown constant. Derive the value of the physical constant $g$, including its units and comment on its physical significiance.')
