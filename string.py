@@ -11,6 +11,7 @@ The content for the pendulum experiment is standard. Here, I have adapted it fro
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
+import zlib
 import streamlit as st
 from sklearn.linear_model import BayesianRidge, LinearRegression, ARDRegression
 from sklearn.metrics import mean_squared_error
