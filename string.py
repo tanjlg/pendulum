@@ -2,20 +2,19 @@
 """
 Spyder Editor
 Tan Jing Long
-1st November 2021
+15 Jan 2022
 This is a Python script for deployment on Streamlit.
-The Streamlit app is intended to digitise the classic pendulum experiment we perform in secondary school, particularly for the data tabulation and analysis aspects.
-The content for the pendulum experiment is standard. Here, I have adapted it from Physics Matters Practical Book (3rd ed.) by Charles Chew and Ho Boon Tiong.
+
+The Streamlit app is intended to digitise an inquiry activity relating the length and the frequency of a string.
 """
 
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-import zlib
 import streamlit as st
 from sklearn.linear_model import BayesianRidge, LinearRegression, ARDRegression
 from sklearn.metrics import mean_squared_error
-from PIL import Image
+#from PIL import Image
 
 st.title('Pendulum Experiment')
 st.header('Part I: Data Collection')
@@ -24,43 +23,43 @@ st.write('In Part I of the experiment, you will be physically performing the exp
 st.subheader('Aim')
 st.write('To investigate the relationship between the period and the length of a simple pendulum')
 
-st.subheader('Apparatus')
-image1 = Image.open('./media/apparatus.jpg')
-st.image(image1, caption='Figure 1: Apparatus')
+#st.subheader('Apparatus')
+#image1 = Image.open('./media/apparatus.jpg')
+#st.image(image1, caption='Figure 1: Apparatus')
 
-st.write('Retort stand  \n',
-         'Sets of boss and clamp  \n',
-         'Split cork  \n',
-         'Thread (approximately 120 cm long)  \n',
-         'Pair of scissors  \n',
-         'Metre rule  \n',
-         'Bob weight  \n',
-         'Stopwatch  \n',
-         'Protractor')
+#st.write('Retort stand  \n',
+#         'Sets of boss and clamp  \n',
+#         'Split cork  \n',
+#         'Thread (approximately 120 cm long)  \n',
+#         'Pair of scissors  \n',
+#         'Metre rule  \n',
+#         'Bob weight  \n',
+#         'Stopwatch  \n',
+#         'Protractor')
 
-st.subheader('Experiment Set-up')
-image2 = Image.open('./media/exptsetup_side.jpg')
-st.image(image2, caption='Figure 2: Experimental Set-up',)
+#st.subheader('Experiment Set-up')
+#image2 = Image.open('./media/exptsetup_side.jpg')
+#st.image(image2, caption='Figure 2: Experimental Set-up',)
 
 length, t1, t2, tave, T, T2 = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
 
-st.subheader('Procedure')
-st.markdown("1. Set-up the experiment as in Figure 2 above, with the thread held tightly by the split cork.")
-image3a = Image.open('./media/splitcork_unfixed.jpg')
-image3b = Image.open('./media/splitcork_knot.jpg')
-image3c = Image.open('./media/splitcork_fixed.jpg')
-image3d = Image.open('./media/exptsetup_top.jpg')
-st.image([image3a, image3b, image3c, image3d], width=244)
+#st.subheader('Procedure')
+#st.markdown("1. Set-up the experiment as in Figure 2 above, with the thread held tightly by the split cork.")
+#image3a = Image.open('./media/splitcork_unfixed.jpg')
+#image3b = Image.open('./media/splitcork_knot.jpg')
+#image3c = Image.open('./media/splitcork_fixed.jpg')
+#image3d = Image.open('./media/exptsetup_top.jpg')
+#st.image([image3a, image3b, image3c, image3d], width=244)
 
-st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is approximately one metre.")
-length[0] = st.number_input('Measure the length of the pendulum in centimetres.',
-                     value=100.0, step=0.1)
+#st.markdown("2. Adjust the thread such that the length of the pendulum $𝑙$ is approximately one metre.")
+#length[0] = st.number_input('Measure the length of the pendulum in centimetres.',
+#                     value=100.0, step=0.1)
 
 st.markdown("3. Set the pendulum into oscillation by displacing the pendulum bob to one side by a small angle (less than $10^\circ$) and then releasing it. The motion of the pendulum from the point of release to the rightmost point and then back to the leftmost point is an example of a complete oscillation (video below). Ensure that the pendulum oscillates in a vertical plane instead of tracing a cone.")
 
-video_file = open('./media/technique.mp4', 'rb')
-video_bytes = video_file.read()
-st.video(video_bytes)
+#video_file = open('./media/technique.mp4', 'rb')
+#video_bytes = video_file.read()
+#st.video(video_bytes)
 
 st.markdown("4. Record the time $t_1$ taken for 20 oscillations using a stopwatch, in seconds.")
 t1[0] = st.number_input(label='First reading', step=0.1)
